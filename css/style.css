@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #000;
+}
+header{
+    height: 100vh ;
+    width:250px ;
+    left: -250px  ;
+    z-index: 900000;
+   
+}
+ul{
+    list-style-type: none;
+}
+nav ul li{
+    padding: 10px 0px ;
+    cursor: pointer;
+    
+}
+
+.nav-icon i , .end-icon{
+    cursor: pointer;
+}
+.nav-close{
+    height: 100vh ;
+}
+.nav-close img{
+    height: 48px ;
+}
+.fa-align-justify{
+    font-size: 25px ;
+    cursor: pointer;
+}
+.img-food{
+    cursor: pointer;
+    width: 25%;
+    
+}
+figure{
+    overflow: hidden;
+}
+figcaption{
+    background-color: rgba(0, 255, 255, 0.7);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    cursor: pointer;
+    transition-duration: 0.7s;
+    display: flex;
+    align-items: center;
+    transform: translateY(100%);
+}
+figure:hover figcaption{
+    transform: translateY(0);
+}
+
+img{
+    height: 250px;
+}
+.icon-close{
+    top: 15px ;
+    right: 15px ;
+
+}
+.icon-close i{
+    font-size: 25px ;
+    color: red;
+    cursor: pointer;
+}
+.layer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    border-radius: 1rem;
+    width: 60%;
+    height: 60%;
+    display: none;
+    overflow-y: scroll;
+    padding: 2rem ;
+}
+.layer::-webkit-scrollbar{
+    width: 10px ;
+}
+.layer::-webkit-scrollbar-thumb{
+    background-color: #f0f0f0;
+    border-radius: 2rem;
+}
+.innerDiv{
+    margin: 1rem;
+}
+.categoriesName{
+    background-color: #f0f0f0;
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.2rem 0.2rem ;
+    border-radius: 0.3rem;
+}
+.img-layer img{
+    width: 100px ;
+    height: 100px ;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+span{
+    
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.2rem 0.2rem ;
+    border-radius: 0.3rem;
+}
+.form-control{
+    background-color: black;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-bottom: 2px  solid white;
+}
+.mx-3{
+    width: 35%;
+}
+
+
+/* style contact */
+
+.input-contact input{
+box-shadow: 2px 2px 3px   #f0f0f0 ;
+}
+a{
+    color: #f0f0f0;
+    text-decoration: none;
+}
+a:hover{
+    color: #f0f0f0;
+}
+.p-input{
+    margin: 15px 0px 0px 0px ;
+}
+.pp-input{
+    border-bottom: 1px solid green ;
+}
+.contact-h2{
+    color: #f0f0f0;
+}
+.img-inner-home img{
+height: 300px ;
+}
