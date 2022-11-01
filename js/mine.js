@@ -81,10 +81,10 @@ let areaArray = [];
     displayHome();
 }
 
-let carton = "";
+let box = "";
 function displayHome() {
-    for (let i = 0; i < meals.length; i++) {
-        carton+=` <div class="col-lg-3 col-md-6">
+    for (let i = 0; i < 20; i++) {
+        box+=` <div class="col-lg-3 col-md-6">
             <figure class="img-home position-relative">
                 <div id=${meals[i].idMeal} class="img-inner-home"><img src="${meals[i].strMealThumb}" alt=""></div>
                 <figcaption class="food-home position-absolute ps-3">
@@ -94,7 +94,7 @@ function displayHome() {
         </div>`
         
      }
-    let xx = document.getElementById('innerhome').innerHTML = carton;
+        document.getElementById('innerhome').innerHTML = box;
 }
 
 ineer();
@@ -123,8 +123,8 @@ function allsearch() {
         </div>`
         
     }
-    let xx = document.getElementById('allsearch').innerHTML = carton3;
-    console.log(carton2)
+    document.getElementById('allsearch').innerHTML = carton3;
+    console.log(carton3)
 }
 
 async function getMealListLetter(){
@@ -316,152 +316,6 @@ $(".submit").click(()=>{
     addUser();
 })
 
-
-// categories\\
-
-let allDataCategories;
-let categories = [];
-let areaArrayCategories = [];
- async function ineerCategories () {
-    let apiResponCategories = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-    let resbonDataCategories = await apiResponCategories.json()
-    allDataCategories= resbonDataCategories.categories
-    console.log(allDataCategories);
-    categories = allDataCategories   
-    displayCategories();
-}
-
-let carton4 = "";
-function displayCategories() {
-    carton4 ="";
-    for (let i = 0; i < categories.length; i++) {
-       console.log(categories.length);
-        carton4+=` <div class="col-lg-3 col-md-6">
-            <figure class="img-home position-relative">
-                <div id=${categories[i].idCategory} class="img-inner-home"><img src="${categories[i].strCategoryThumb}" alt=""></div>
-                <figcaption class="food-home position-absolute ps-3">
-                    <h3 class="Api-NameFood">${categories[i].strCategory}</h3>
-                    <p>${categories[i].strCategoryDescription}</p>
-                </figcaption>
-            </figure>
-        </div>`
-        
-     }
-    let o =  document.getElementById('inner-categoriese').innerHTML = carton4;
-    console.log(o);
-}
-ineerCategories();
-
-let dataCategories;
-let categories2 = [];
-let ArrayCategories = [];
- async function ineerCategories () {
-    let apiResponCategories2 = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
-    let resbonDataCategories2 = await apiResponCategories2.json()
-    dataCategories= resbonDataCategories2.categories
-    console.log(allDataCategories);
-    categories2 = dataCategories   
-    displayCategories();
-}
-
-let carton7 = "";
-function displayCategories() {
-    carton7 ="";
-    for (let i = 0; i < categories.length; i++) {
-       console.log(categories.length);
-        carton4+=` <div class="col-lg-3 col-md-6">
-            <figure class="img-home position-relative">
-                <div id=${categories[i].idCategory} class="img-inner-home"><img src="${categories[i].strCategoryThumb}" alt=""></div>
-                <figcaption class="food-home position-absolute ps-3">
-                    <h3 class="Api-NameFood">${categories[i].strCategory}</h3>
-                    <p>${categories[i].strCategoryDescription}</p>
-                </figcaption>
-            </figure>
-        </div>`
-        
-     }
-    let o =  document.getElementById('inner-Category').innerHTML = carton7;
-    console.log(o);
-}
-
-
-
-
-
-
-// area \\
-
-let allDataArea;
-let area = [];
-let areaArrayArea = [];
- async function ineerArea () {
-    let apiResponArea = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
-    let resbonDataArea = await apiResponArea.json()
-    allDataArea= resbonDataArea.area
-    console.log(resbonDataArea);
-    area = allDataArea   
-    displayArea();
-}
-
-let carton5 = "";
-function displayArea() {
-    carton5 ="";
-    for (let i = 0; i < area.length; i++) {
-        carton5 +=` <div class="col-lg-3 col-md-6 ">
-                        <div class="icon-area shadow text-center">
-                           <i class="icon-area shadow text-center"></i>
-                          <div class="name-city py-3">
-                              <h3>${area[i].strArea}</h3>
-                            </div>
-            
-                         </div>
-        
-                     </div>`
-        
-     }
-    let m =  document.getElementById('area-inner').innerHTML = carton5;
-    console.log(m);
-}
-ineerArea ();
-
-// ingredintes \\ 
-
-
-
-let allDatIngred;
-let ingred = [];
-let areaArrayIngred = [];
- async function ineerIngred () {
-    let apiResponIngred = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?i=");
-    let resbonDataIngred = await apiResponIngred.json()
-    allDatIngred= resbonDataIngred.meals
-    console.log(allDatIngred);
-    ingred = allDatIngred   
-    displayArea();
-}
-
-let carton6 = "";
-function displayIngred() {
-    carton6 ="";
-    for (let i = 0; i < ingred.length; i++) {
-             carton6 +=`<div class="col-lg-3 col-md-6 ">
-             <h4>${ingred[i].strMeal}.strMeal</h4>
-                           <div class="icon-area shadow text-center" id="${ingred[i].idMeal}">
-                           <img src="${ingred[i].strMealThumb}" alt="">
-                                <div class="name-city py-3">
-                                     <h3></h3>
-                                     <p></p>
-                                </div>
-            
-                            </div>
-        
-                        </div>`
-        
-     }
-    let t=  document.getElementById('area-inner').innerHTML = carton6;
-    console.log(t);
-}
-ineerIngred ();
 
 
 

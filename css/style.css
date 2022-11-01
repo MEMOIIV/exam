@@ -125,7 +125,65 @@ span{
     width: 35%;
 }
 
+/* Categories */
+.img-Categ{
+    overflow: hidden;
+}
+.food-Categ{
+    background-color: rgb(183, 183, 183,0.7);
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition-duration: 0.7s;
+}
+.img-Categ:hover .food-Categ{
+    transform: translateY(0);
 
+}
+
+.img-inner-Categ img {
+    height: 250px ;
+    width: 250px ;
+}
+
+
+/* ingredints */
+.i-ingred {
+    color: #9ee650ab;
+    padding-bottom: 10px ; 
+    
+}
+.content{
+    color: #f0f0f0;
+}
+.text{
+    border: none;
+}
+.bg{
+    background-color: inherit;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+/* area */
+
+.area{
+    text-align: center;
+    cursor: pointer;
+}
+.area h3{
+    padding: 1rem;
+    color: #f0f0f0;
+}
+.i-area{
+    color: #9E403A;
+}
 /* style contact */
 
 .input-contact input{
